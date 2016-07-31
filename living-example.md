@@ -3,6 +3,7 @@
 ***
 ##一、Lottery Draw(随机抽奖)
 ####1.object方法
+[open](exercise/1-lottery-draw1.html)
 ######思路：若该对象的属性名未定义，标记该属性名，否则重抽。
 ```javascript
 var obj={};
@@ -30,6 +31,7 @@ function objLength(object){
 }
 ```
 ####2.array方法
+[open](exercise/1-lottery-draw2.html)
 ######思路：创建新数组，如果新创建的数组个数小于存放人名这个数组的个数，遍历这个新数组，如果随机抽取的人名等于我这个数组的人名，重新抽，抽完终止，遍历后没有发现重名，则存入新数组，并输出。
 ```javascript
 var array=[];
@@ -51,5 +53,25 @@ var array=[];
                 console.log(person);            
             }
         }
+```
+***
+##二、imageSwitcher(切换图片)
+####1.jquery方法(改变图片来源)
+[open](exercise/imageSwitcher.html)
+######思路：用数组存放图片来源，好处是图片名字可以任意取。点击索引时切换相应图片来源。
+```javascript
+<script>
+    var src1=[
+        "images/1.jpg",
+        "images/2.jpg",
+        "images/3.jpg",
+        "images/4.jpg",
+        "images/5.jpg"
+        ];
+    $(".list li").click(function(){
+        var ind=$(this).index();
+        $(".image").attr("src",src1[ind]);
+    });
+</script>
 ```
 ***
