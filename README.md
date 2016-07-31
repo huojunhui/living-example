@@ -1,9 +1,29 @@
 #Living Example
 ##一、Lottery Draw(随机抽奖)
 ####1.object方法
-######思路：若该对象的属性么未定义，标记该属性名，否则重抽。
+######思路：若该对象的属性名未定义，
 ```html
-    var obj={};
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lottery draw</title>
+    <style type="text/css">
+        *{
+            padding:0;
+            margin:0;
+        }
+        .btn{
+            display:block;
+            width: 50px;
+            height: 50px;
+            margin:0 auto;
+        }
+    </style>
+</head>
+```
+```javascript
+        var obj={};
         var people=["张三","李四","王五","赵柳","虞美人"];
         $(".btn").click(function(){
             LotteryDraw(people,obj);
