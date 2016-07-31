@@ -1,4 +1,5 @@
 #Living Example(实例)
+####[返回目录](https://github.com/huojunhui/living-example)
 ***
 ##一、Lottery Draw(随机抽奖)
 ####1.object方法
@@ -28,7 +29,6 @@ function objLength(object){
     return n;
 }
 ```
-***
 ####2.array方法
 ######思路：创建新数组，如果新创建的数组个数小于存放人名这个数组的个数，遍历这个新数组，如果随机抽取的人名等于我这个数组的人名，重新抽，抽完终止，遍历后没有发现重名，则存入新数组，并输出。
 ```javascript
