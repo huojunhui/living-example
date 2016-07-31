@@ -1,4 +1,4 @@
-#Living Example
+#Living Example(实例)
 ***
 ##一、Lottery Draw(随机抽奖)
 ####1.object方法
