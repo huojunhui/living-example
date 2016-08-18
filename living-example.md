@@ -124,3 +124,31 @@ function bubbleSort(array){
 }
 </script>
 ```
+***
+##五、将数组中数据更新到表格
+######思路：i层控制tr，j层控制td..遍历二维数组，数组中的元素就是td
+的文本节点(text)，tr添加td(append)
+```javascript
+<body>
+    <table></table>
+    <script src="script/jquery.js"></script>
+    <script>
+        var studentsList=[
+            {name:"zhangsan",age:13,sex:"female"},
+            {name:"lisi",age:18,sex:"male"},
+            {name:"wangwu",age:20,sex:"male"},
+        ];
+        for(var i in studentsList){
+            $tr=$("<tr>");//创建tr;
+            for(var j in studentsList[i]){
+                $td=$("<td>");
+                var text=studentsList[i][j];
+                $td.text(text);
+                $tr.append($td);
+            }
+            $("table").append($tr);
+        }
+    </script>
+</body>
+</script>
+```
